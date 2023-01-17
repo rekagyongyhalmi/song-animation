@@ -10,12 +10,12 @@ body {
 
 .container {
     margin: 10px 10% auto;
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 p {
-    grid-column: 1;
+    flex-basis: content;
     font-style: italic;
     font-size: 1.5em;
     font-weight: 700;
@@ -25,7 +25,9 @@ p {
 }
 
 iframe {
-    grid-column: 2;
+    flex-basis: 800px;
+    min-height: 400px;
+    margin: 2%;
     border: 0.5em solid var(--textturquoise);
     border-radius: 5px;
 }
@@ -36,10 +38,6 @@ iframe {
 
 .revealed {
     animation: 1s forwards reveal;
-}
-
-#sky {
-    grid-column: 1 / span 2;
 }
 
 #line1 {
@@ -86,10 +84,21 @@ iframe {
 }
 
 .btn {
-    border-radius: 5%;
+    border-radius: 5px;
+    background-color: lightgray;
+    border: 1px solid white;
+    color: var(--textturquoise);
+    padding: 0 15px 5px;
+    box-shadow: -5px 5px 5px var(--textturquoise);
+}
+
+.btn:hover {
+    border-radius: 5px;
     background-color: var(--textturquoise);
+    border: 1px solid var(--textturquoise);
     color: white;
-    padding: 0 5px 5px;
+    padding: 0 15px 5px;
+    box-shadow: inset 5px 5px 5px darkgray;
 }
 
 svg {

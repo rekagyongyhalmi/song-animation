@@ -34,6 +34,6 @@ function flyBalloons() {
             document.querySelector("iframe").classList.add("revealed");
             document.querySelector("iframe").classList.remove("hidden");
             document.getElementById("sky").innerHTML = "";
-        }, "11000");
+        }, "10500");
     }
 }
