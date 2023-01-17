@@ -1,0 +1,140 @@
+:root {
+    --balloonred: #ff1100;
+    --textturquoise: #007b7b;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: black;
+}
+
+.container {
+    margin: 10px 10% auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+}
+
+p {
+    grid-column: 1;
+    font-style: italic;
+    font-size: 1.5em;
+    font-weight: 700;
+    line-height: 1.5em;
+    color: var(--textturquoise);
+    opacity: 0;
+}
+
+iframe {
+    grid-column: 2;
+    border: 0.5em solid var(--textturquoise);
+    border-radius: 5px;
+}
+
+.hidden {
+    opacity: 0;
+}
+
+.revealed {
+    animation: 1s forwards reveal;
+}
+
+#sky {
+    grid-column: 1 / span 2;
+}
+
+#line1 {
+    animation: 1.5s forwards reveal;
+}
+
+#line2 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 1.5s;
+}
+
+#line3 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 3s;
+}
+
+#line4 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 4.5s;
+}
+
+#line5 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 6s;
+}
+
+#line6 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 7.5s;
+}
+
+#line7 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 9s;
+}
+
+#line8 {
+    animation: 1.5s forwards reveal;
+    animation-delay: 10.5s;
+}
+
+#msg {
+    animation: flashing infinite 500ms;
+}
+
+.btn {
+    border-radius: 5%;
+    background-color: var(--textturquoise);
+    color: white;
+    padding: 0 5px 5px;
+}
+
+svg {
+    overflow: visible;
+}
+
+
+path {
+    fill: var(--balloonred);
+    stroke: black;
+    stroke-width: 3em;
+    animation: 10s forwards flying;
+}
+
+@keyframes flying {
+    0% {
+        transform: translateY(-1500vh);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(6000vh);
+        opacity: 0;
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes flashing {
+    from {
+        color: var(--textturquoise)
+    }
+
+    to {
+        color: yellowgreen
+    }
+}
