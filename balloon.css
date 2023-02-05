@@ -12,6 +12,7 @@ body {
     margin: 10px 10% auto;
     display: flex;
     flex-wrap: wrap;
+    min-width: 45%;
 }
 
 p {
@@ -22,6 +23,15 @@ p {
     line-height: 1.5em;
     color: var(--textturquoise);
     opacity: 0;
+}
+
+#song {
+    min-width: 45%;
+    padding-left: 5%;
+}
+
+h2 {
+    color: var(--balloonred);
 }
 
 iframe {
@@ -146,4 +156,15 @@ path {
     to {
         color: yellowgreen
     }
+}
+
+#github-link {
+    color: var(--balloonred);
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+}
+
+#github-link a {
+    color: white;
 }

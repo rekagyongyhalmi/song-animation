@@ -31,8 +31,8 @@ function flyBalloons() {
         let balloon = balloonSvg.concat(balloonGroup, ballonPath);
         document.getElementById("sky").innerHTML += balloon;
         setTimeout(() => {
-            document.querySelector("iframe").classList.add("revealed");
-            document.querySelector("iframe").classList.remove("hidden");
+            document.getElementById("song").classList.add("revealed");
+            document.getElementById("song").classList.remove("hidden");
             document.getElementById("sky").innerHTML = "";
         }, "10500");
     }
